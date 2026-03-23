@@ -1,224 +1,168 @@
 <!DOCTYPE html>
 <html lang="ro">
-
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Ganesanu Cristian-Dumitru">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Zenovex - Platforma premium pentru arta digitala, NFT-uri si colectibile unice pe blockchain.">
     <meta name="keywords" content="Zenovex, NFT, ETH, blockchain, crypto art, colectibile, minting, licitatii NFT, ethereum, solana, metavers, web3, galerie digitala, smart contracts, pret gas, trading">
+    <meta name="theme-color" content="#a855f7">
 
     <link rel="icon" type="image/png" href="./resurse/ico/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="./resurse/ico/favicon.svg">
     <link rel="shortcut icon" href="./resurse/ico/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./resurse/ico/apple-touch-icon.png">
     <link rel="manifest" href="./resurse/ico/site.webmanifest">
-    <meta name="theme-color" content="#a855f7">
     
     <title>Zenovex | Viitorul Artei Digitale</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">  
-
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@300..700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body style="font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 0 20px; background-color: #fafafa;">
-
-    <header style="padding: 20px 0; border-bottom: 2px solid #a855f7;">
-        <h1 style="font-family: 'Orbitron', sans-serif; color: #a855f7; margin: 0;">Zenovex</h1>
-        
+    <header>
+        <h1 class="logo">Zenovex</h1>
         <nav>
-            <ul class="meniu">
-                <li>Acasa <ul><li><a href="#welcome">Bun venit</a></li></ul></li>
-                <li><a href="#marketplace">Marketplace</a>
-                    <ul>
-                        <li><a href="#licitatii">Licitații Live</a></li>
-                        <li><a href="#galerie">Galerie Print-uri</a></li>
-                    </ul>
-                </li>
-                <li>Educație
-                    <ul>
-                        <li><a href="#dictionar">Ghid NFT</a></li>
-                        <li><a href="#documentatie-pdf">Documentație PDF</a></li>
-                        <li><a href="#video-ghid">Tutoriale Video</a></li>
-                    </ul>
-                </li>
-                <li>Comunitate
-                    <ul>
-                        <li><a href="#evenimente">Evenimente</a></li>
-                        <li><a href="#statistici">Top Artiști</a></li>
-                    </ul>
-                </li>
+            <ul class="meniu-principal">
+                <li><a href="#welcome">Acasa</a></li>
+                <li><a href="#statistici">Marketplace</a></li>
+                <li><a href="#dictionar">Educație</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <div id="grid-pagina">
-            
-            <section id="welcome" style="margin-top: 30px;">
-                <hgroup>
-                    <h2 style="font-family: 'Orbitron', sans-serif;">Lumea Digitală la un Click Distanță</h2>
-                    <p class="subtitlu" style="color: #666; font-style: italic;">Unde arta întâlnește tehnologia blockchain.</p>
-                </hgroup>
-                
-                <blockquote cite="https://ethereum.org" style="border-left: 4px solid #a855f7; padding-left: 15px; margin: 20px 0;">
-                    "NFT-urile oferă artiștilor puterea de a deține controlul asupra propriilor creații."
-                </blockquote>
-                
-                <p><b>Zenovex</b> este o platformă descentralizată unde poți cumpăra <dfn id="def-nft">NFT-uri</dfn> unice.</p>
-
-                <figure id="hero-img">
-                    <img src="./resurse/imagini/banner-mare.jpg" usemap="#zenovex-map" alt="Banner Zenovex" style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                    <map name="zenovex-map">
-                        <area shape="rect" coords="0,0,400,300" href="#welcome" alt="Acasa">
-                        <area shape="circle" coords="800,200,150" href="#galerie" alt="Mergi la Galerie">
-                    </map>
-                    <figcaption style="font-size: 0.9rem; margin-top: 5px; color: #777;">
-                        Preview: Colecția "Cybernetic Dreams". (Sfat: Click pe logo pentru sus, click pe artă pentru galerie)
-                    </figcaption>
-                </figure>
-                
-                <p><strong>ATENȚIE!</strong> Beneficiază de <ins>0% comision</ins> acum!</p>
-            </section>
-
-            <section id="calcul-cost" style="background: #f3e8ff; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                <h3>Calculul Costului</h3>
-                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                    <msub><mi>C</mi><mtext>total</mtext></msub>
-                    <mo>=</mo>
-                    <msub><mi>P</mi><mtext>NFT</mtext></msub>
-                    <mo>+</mo>
-                    <mfenced><mrow><mi>G</mi><mo>×</mo><msub><mi>P</mi><mtext>gas</mtext></msub></mrow></mfenced>
-                </math>
-            </section>
-
-            <section id="licitatii">
-                <h2>Licitații Live</h2>
-                <article style="background: white; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-                    <h3>Colecția <em>Voxel Warriors</em></h3>
-                    <p>Token-uri rezervate:</p>
-                    <meter min="0" max="100" low="20" high="75" optimum="10" value="88"></meter> <span>88% Sold Out</span>
-                </article>
-            </section>
-
-            <section id="documentatie-pdf" style="margin: 30px 0; padding: 20px; background-color: #f4f4f9; border-radius: 12px; border: 1px solid #ddd;">
-                <h3 style="color: #a855f7; border-bottom: 2px solid #a855f7; display: inline-block; padding-bottom: 5px;">Ghidul Investitorului (PDF)</h3>
-                <div style="display: flex; justify-content: center; background: #2d2d2d; padding: 15px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
-                    <object data="./resurse/pdf/Zenovex_Ghid_Incepatori.pdf" type="application/pdf" style="width: 95%; height: 600px;">
-                        <div style="background: white; padding: 20px; text-align: center;">
-                            <p>PDF-ul nu poate fi afișat. <a href="./resurse/pdf/Zenovex_Ghid_Incepatori.pdf">Descarcă-l aici.</a></p>
-                        </div>
-                    </object>
-                </div>
-            </section>
-
-            <section id="evenimente">
-                <h2>Evenimente</h2>
-                <ul>
-                    <li>
-                        <time datetime="2026-03-23 19:00">23 Martie 2026</time> - Lansare "Neo-Tokyo".
-                    </li>
-                    <li>
-                        <time datetime="2026-03-28 14:00">28 Martie 2026</time> - Workshop: Securitatea Portofelului Digital. 
-                    </li>
-                </ul>
-            </section>
-
-            <section id="dictionar">
-                <h2>Termeni Tehnici</h2>
-                <ul>
-                    <li><abbr title="Gas Fees">Gas:</abbr> Taxa de rețea.</li>
-                    <li><i lang="en">Floor Price</i>: Preț minim.</li>
-                </ul>
-                <p>Detalii la <a href="https://opensea.io/learn" target="_blank">Academia Zenovex</a>.</p>
-            </section>
-
-            <section id="video-ghid">
-                <h2>Tutoriale Video</h2>
-                
-                <div style="margin-bottom: 15px; padding: 10px; background: #f3e8ff; border-radius: 5px;">
-                    <strong>Schimbă lecția:</strong> 
-                    <a href="https://www.youtube.com/embed/s45bwhhVTmk?si=hIVqOhH0o105KJ8j" target="video-player">Ce este un NFT?</a> | 
-                    <a href="https://www.youtube.com/embed/hXuK6FxD2bo?si=80VzryCmiMNW5e5Sc" target="video-player">Securitate Crypto</a> | 
-                    <a href="https://www.youtube.com/embed?listType=playlist&list=PLASEfdY-tiDrIwtPGSO7dfqeVvVyjf07o" target="video-player">Reîncarcă Playlist Zenovex</a>
-                </div>
-
-                <iframe name="video-player" width="560" height="315" 
-                    src="https://www.youtube.com/embed?listType=playlist&list=PLASEfdY-tiDrIwtPGSO7dfqeVvVyjf07o&autoplay=1&loop=1&mute=1&playlist=PLASEfdY-tiDrIwtPGSO7dfqeVvVyjf07o&controls=1" 
-                    title="Playlist Blockchain" style="border: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" 
-                    allowfullscreen>
-                </iframe>
-                
-                <p><small>*Alegeți un subiect din lista de mai sus pentru a viziona în player-ul Zenovex.</small></p>
-            </section>
-
-            <section id="statistici" style="margin: 40px 0; padding: 20px; background-color: #fff; border: 1px solid #eaeaea; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <h2 style="color: #a855f7; border-bottom: 2px solid #f3e8ff; padding-bottom: 10px;">Top Artiști Zenovex</h2>
-                <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
-                    <caption style="margin-bottom: 10px; font-style: italic;">Volum tranzacționat săptămâna aceasta</caption>
-                    <thead style="background-color: #a855f7; color: white;">
-                        <tr><th>Artist</th><th>Colecție</th><th>Volum</th><th>Status</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td rowspan="2"><b>PixelMaster</b></td><td>Retro Waves</td><td>15.5 ETH</td><td>Trending</td></tr>
-                        <tr><td>Neon Nights</td><td>8.2 ETH</td><td>Stabil</td></tr>
-                        <tr><td><b>CryptoArtiste</b></td><td>Abstract Soul</td><td>22.1 ETH</td><td>Top Seller</td></tr>
-                    </tbody>
-                    <tfoot style="background-color: #f3e8ff; font-weight: bold;">
-                        <tr><td colspan="3" style="text-align: left;">Total Marketplace:</td><td>45.8 ETH</td></tr>
-                    </tfoot>
-                </table>
-            </section>
-
-            <section id="faq">
-                <h2>FAQ</h2>
-                <details>
-                    <summary>Este sigur?</summary>
-                    <p>Da, folosim contracte inteligente auditate.</p>
-                </details>
-                <details>
-                    <summary>Pot vinde propria mea artă?</summary>
-                    <p>Da, secțiunea "Creează" va fi disponibilă în curând pentru toți artiștii verificați.</p>
-                </details>
-            </section>
-
-            <section id="galerie">
-            <h2>Galerie de Print-uri</h2>
-            <figure style="border: 1px solid #ddd; padding: 15px; display: inline-block; background: white; border-radius: 8px;">
-                <a href="./resurse/imagini/nft-1-large.jpg" target="_blank">
-                    <picture>
-                        <source srcset="./resurse/imagini/nft-1-large.jpg" media="(min-width: 1024px)">
-                        
-                        <source srcset="./resurse/imagini/nft-1-large.jpg" media="(min-width: 700px)">
-                        
-                        <img src="./resurse/imagini/nft-1-small.jpg" 
-                            alt="Cyber-Cat NFT Artwork" 
-                            title="Cyber-Cat: Ediție limitată Zenovex (Click pentru rezoluție 4K)" 
-                            style="width: 300px; border-radius: 5px;">
-                    </picture>
-                </a>
-                <figcaption style="margin-top: 10px; font-weight: 500;">
-                    Artwork 01 - "Cyber-Cat". 
-                    <a href="./resurse/imagini/nft-1-large.jpg" download="Zenovex_Artwork_01.jpg" style="color: #a855f7;">Download Full Res</a>
-                </figcaption>
+    <main id="grid-pagina">
+        <section id="welcome" class="zona1">
+            <hgroup>
+                <h2>Lumea Digitală la un Click Distanță</h2>
+                <p class="subtitlu">Unde arta întâlnește tehnologia blockchain.</p>
+            </hgroup>
+            <blockquote cite="https://ethereum.org">
+                "NFT-urile oferă artiștilor puterea de a deține controlul asupra propriilor creații."
+            </blockquote>
+            <figure id="hero-img">
+                <img src="./resurse/imagini/banner-mare.jpg" usemap="#zenovex-map" alt="Banner Zenovex">
+                <map name="zenovex-map">
+                    <area shape="rect" coords="0,0,400,300" href="#welcome" alt="Acasa">
+                </map>
+                <figcaption>Preview: Colecția "Cybernetic Dreams".</figcaption>
             </figure>
         </section>
-        </div>
+
+        <section id="statistici" class="zona2">
+            <h2><i class="fas fa-chart-line fa-beat"></i> Top Artiști</h2>
+            <div class="container-tabel">
+                <table>
+                    <caption>Volum tranzacționat săptămâna aceasta</caption>
+                    <thead>
+                        <tr><th>Artist</th><th>Colecție</th><th>Status</th><th>Volum</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="2"><b>PixelMaster</b></td><td>Retro Waves</td><td>Trending</td><td>15.5 ETH</td></tr>
+                        <tr><td>Neon Nights</td><td>Stabil</td><td>8.2 ETH</td></tr>
+                        <tr><td><b>CryptoArtiste</b></td><td>Abstract Soul</td><td>Top Seller</td><td>22.1 ETH</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><td colspan="3">Total Marketplace:</td><td>45.8 ETH</td></tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="evenimente" class="zona3">
+            <h2>Evenimente</h2>
+            <ul>
+                <li><time datetime="2026-03-23 19:00">23 Martie</time> - Lansare "Neo-Tokyo".</li>
+                <li><time datetime="2026-03-28 14:00">28 Martie</time> - Workshop Securitate.</li>
+            </ul>
+        </section>
+
+        <section class="zona4">
+            <h2>Anunțuri</h2>
+            <p><strong>ATENȚIE!</strong> Beneficiază de <ins><s>10%</s> 0% comision</ins> acum!</p>
+        </section>
+
+        <section class="zona8">
+            <div id="video-ghid">
+                <h2>Tutoriale Video</h2>
+                <div class="taburi-video">
+                    <a href="https://www.youtube.com/embed/s45bwhhVTmk" target="video-player">NFT?</a>
+                    <a href="https://www.youtube.com/embed/hXuK6FxD2bo" target="video-player">Securitate</a>
+                    <a href="https://www.youtube.com/embed?list=PLASEfdY-tiDrIwtPGSO7dfqeVvVyjf07o" target="video-player">Playlist</a>
+                </div>
+                <iframe name="video-player" src="https://www.youtube.com/embed?list=PLASEfdY-tiDrIwtPGSO7dfqeVvVyjf07o" title="YouTube" allowfullscreen></iframe>
+            </div>
+
+            <div id="galerie">
+                <h2>Galerie</h2>
+                <figure>
+                    <picture>
+                        <source srcset="./resurse/imagini/nft-1-large.jpg" media="(min-width: 1024px)">
+                        <img src="./resurse/imagini/nft-1-small.jpg" alt="Cyber-Cat" title="Click pentru 4K">
+                    </picture>
+                    <figcaption>Artwork 01 - "Cyber-Cat".</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="zona5">
+            <h3>Comunitate</h3>
+            <p>Utilizatori activi: 1,240</p>
+        </section>
+
+        <section class="zona6">
+            <h3>Profilul tău</h3>
+            <p>Conectează-ți portofelul...</p>
+        </section>
+
+        <section class="zona7">
+            <h3>Status Rețea</h3>
+            <p>Gas Price: 15 Gwei</p>
+        </section>
+
+        <section id="calcul-cost" class="zona-math">
+            <h3><i class="fas fa-calculator"></i> Calculul Costului</h3>
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                    <msub class="m-rezultat">
+                        <mi>C</mi>
+                        <mtext>total</mtext>
+                    </msub>
+
+                    <mo class="m-operator">=</mo>
+
+                    <msub class="m-pret">
+                        <mi>P</mi>
+                        <mtext>NFT</mtext>
+                    </msub>
+
+                    <mo class="m-operator">+</mo>
+
+                    <mo class="m-paranteza">(</mo>
+                    <mi class="m-variabila">G</mi>
+                    <mo class="m-operator">&times;</mo>
+                    <msub class="m-variabila">
+                        <mi>P</mi>
+                        <mtext>gas</mtext>
+                    </msub>
+                    <mo class="m-paranteza">)</mo>
+                </mrow>
+            </math>
+            <p class="nota-math"><small>* G reprezintă unitățile de Gas, iar Pgas prețul per unitate.</small></p>
+        </section>
     </main>
 
-    <footer style="margin-top: 50px; padding: 20px; border-top: 2px solid #a855f7; background-color: #eee;">
-        <a href="#" id="link-top">↑ Sus</a>
-        <address>
-            Zenovex HQ, Strada Academiei 14, București<br>
-            Tel: <a href="tel:+40712345678">0712 345 678</a> | 
-            Email: <a href="mailto:contact@zenovex.ro">contact@zenovex.ro</a><br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.845942858102!2d26.09886327658709!3d44.43635540141635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff47144e0589%3A0xf639a046c87e4114!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1709415000000!5m2!1sro!2sro" 
-            height="200" style="width: 100%; border: 0; margin-top: 10px;" allowfullscreen="" loading="lazy"></iframe>
-        </address>
+    <footer>
+        <address>Zenovex HQ, Strada Academiei 14, București</address>
         <p><small>© 2026 Zenovex. Creat la: <time datetime="2026-03-15">15 martie 2026</time>.</small></p>
+        <div id="container-top">
+            <a href="#" id="link-top" title="Înapoi sus"></a>
+        </div>
     </footer>
+
 </body>
 </html>
