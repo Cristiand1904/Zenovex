@@ -188,3 +188,103 @@ math {
     transform: scale(1.05);
     filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
 }
+.banner-proiect-print, .watermark-print {
+    display: none;
+}
+
+@media print {
+    #grid-pagina {
+        display: block !important;
+    }
+
+    img, video, iframe, figure figcaption, .taburi-video, #link-top, .burger-label, .burger-check {
+        display: none !important;
+    }
+
+    a {
+        text-decoration: none !important;
+        color: black !important;
+        pointer-events: none;
+    }
+
+    .banner-proiect-print {
+        display: block !important;
+        position: absolute;
+        bottom: 1.5cm;
+        left: 15%;
+        width: 70%;
+        border: 4px inset black;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    header h1 {
+        text-align: center !important;
+        width: 100%;
+    }
+
+    .meniu-lista span {
+    display: inline !important; /* Forțăm afișarea textului la print */
+    }
+
+    nav.nav-principal {
+        display: block !important;
+        background: none !important;
+    }
+
+    .meniu-lista {
+        display: block !important;
+        list-style-type: disc !important;
+        padding-left: 20px;
+    }
+
+    .submeniu {
+        display: none !important;
+    }
+
+    /* Page Breaks */
+    header {
+        break-after: page;
+    }
+
+    footer {
+        break-before: page;
+    }
+
+    .watermark-print {
+        display: block !important;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 4cm;
+        height: 1cm;
+        border: 3px solid black;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        opacity: 0.4;
+        background: white;
+        font-size: 10px;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @page {
+        margin: 1cm;
+    }
+    
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+    
+    @page :right {
+        margin-left: 1cm;
+        margin-right: 3cm;
+    }
+    header { page-break-after: always; }
+    footer { page-break-before: always; }
+}
