@@ -24,7 +24,6 @@ body {
 h1, h2, h3, .logo {
     font-family: 'Orbitron', sans-serif;
     color: var(--primary);
-    margin-bottom: 1rem;
 }
 
 #grid-pagina {
@@ -47,7 +46,7 @@ h1, h2, h3, .logo {
 .zona7 { grid-area: z7; }
 .zona8 { grid-area: z8; }
 
-section, header, footer {
+section, footer {
     background-color: var(--bg-sectiune);
     padding: var(--pad-sec);
     border-radius: var(--rad-sec);
