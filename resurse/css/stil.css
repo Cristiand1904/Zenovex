@@ -370,3 +370,152 @@ math {
     transform: scale(1.05);
     filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
 }
+
+#banner-print {
+    display: none;
+}
+
+#watermark-print {
+    display: none;
+}
+
+@media print {
+
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page :right {
+        margin-left: 1cm;
+        margin-right: 3cm;
+    }
+
+    #watermark-print {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 4cm;
+        height: 1cm;
+        border: 3px solid black;
+        border-radius: 3px;
+        opacity: 0.4;
+        font-weight: bold;
+        font-size: 0.35cm;
+        text-align: center;
+        background: white;
+    }
+
+    #watermark-print span {
+        display: block;
+        line-height: 1.2;
+    }
+
+    img,
+    video,
+    iframe,
+    picture,
+    figure,
+    figcaption,
+    object,
+    #container-top,
+    #link-top,
+    #hero-img,
+    #galerie,
+    #video-ghid {
+        display: none !important;
+    }
+
+    #grid-pagina {
+        display: block !important;
+    }
+
+    a,
+    a:visited {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
+    header {
+        position: relative;
+        min-height: 26cm;
+        text-align: center;
+        page-break-after: always;
+        background: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .burger-label,
+    .burger-check {
+        display: none !important;
+    }
+
+    .nav-principal {
+        display: block !important;
+        position: static !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    .meniu-lista {
+        display: block !important;
+        list-style: disc !important;
+        padding-left: 1.5rem;
+        text-align: left;
+        width: fit-content;
+        margin: 1rem auto;
+    }
+
+    .meniu-lista>li {
+        list-style: disc !important;
+    }
+
+    .submeniu {
+        display: none !important;
+    }
+
+    .btn-meniu i {
+        display: none !important;
+    }
+
+    .btn-meniu {
+        background: none !important;
+        color: inherit !important;
+        text-shadow: none !important;
+        padding: 0.2rem 0 !important;
+        font-size: 1rem;
+    }
+
+    footer {
+        page-break-before: always;
+        background: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    #banner-print {
+        display: block !important;
+        position: absolute;
+        bottom: 2.5cm;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        text-align: center;
+        border: 4px inset black;
+        padding: 0.5rem;
+        background: white;
+        font-weight: bold;
+    }
+
+    section {
+        background: none !important;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+}

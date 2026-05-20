@@ -18,19 +18,24 @@ body {
 
 .nav-principal {
   background-color: var(--culoare-meniu);
-  position: sticky;
-  top: 0;
   z-index: 1000;
 }
+
+header {
+  position: relative;
+}
+
 .nav-principal .meniu-lista {
   list-style: none !important;
   padding: 0;
   margin: 0;
 }
+
 .nav-principal .meniu-lista li {
   position: relative;
   list-style-type: none !important;
 }
+
 .nav-principal .meniu-lista li .btn-meniu {
   display: block;
   padding: 1rem 1.5rem;
@@ -43,25 +48,39 @@ body {
   overflow: hidden;
   text-shadow: 0 -50px 0 var(--umbra-text);
 }
+
 .nav-principal .meniu-lista li .btn-meniu:hover {
   background-color: var(--culoare-hover);
   text-shadow: 0 0 0 var(--text-meniu);
 }
+
+.nav-principal .meniu-lista li:has(.submeniu) .btn-meniu {
+  text-shadow: none;
+}
+
+.nav-principal .meniu-lista li:has(.submeniu) .btn-meniu:hover {
+  text-shadow: none;
+}
+
 .nav-principal .meniu-lista li .btn-meniu i {
   margin-right: 8px;
 }
+
 .nav-principal .meniu-lista li .submeniu {
   position: absolute;
   top: 100%;
   left: 0;
   min-width: 200px;
-  background: var(--culoare-hover);
+  background: var(--culoare-meniu);
   list-style: none;
+  padding: 0;
+  margin: 0;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.4s ease-in-out;
   overflow: hidden;
 }
+
 .nav-principal .meniu-lista li .submeniu li a {
   display: block;
   padding: 0.8rem;
@@ -70,6 +89,7 @@ body {
   position: relative;
   transition: background 0.3s;
 }
+
 .nav-principal .meniu-lista li .submeniu li a::after {
   content: "";
   position: absolute;
@@ -80,12 +100,15 @@ body {
   background: white;
   transition: width 0.4s;
 }
+
 .nav-principal .meniu-lista li .submeniu li a:hover {
-  background-color: var(--culoare-meniu);
+  background-color: var(--culoare-hover);
 }
+
 .nav-principal .meniu-lista li .submeniu li a:hover::after {
   width: 100%;
 }
+
 .nav-principal .meniu-lista li:hover .submeniu {
   transform: scaleY(1);
 }
@@ -94,14 +117,17 @@ body {
   .nav-principal .meniu-lista li .btn-meniu {
     font-size: 0.9rem;
   }
+
   .nav-principal .meniu-lista li .btn-meniu span {
     display: none;
   }
+
   .nav-principal .meniu-lista li .btn-meniu i {
     margin-right: 0;
     font-size: 1.2rem;
   }
 }
+
 @media (max-width: 600px) {
   .nav-principal {
     display: none;
@@ -110,44 +136,78 @@ body {
     left: 0;
     width: 100%;
     background: var(--culoare-meniu);
+    z-index: 999;
   }
-  .burger-check:checked ~ .nav-principal {
+
+  .burger-check:checked~.nav-principal {
     display: block;
   }
+
   .meniu-lista {
     flex-direction: column;
   }
+
   .meniu-lista li {
     width: 100%;
   }
+
   .meniu-lista li .btn-meniu {
-    letter-spacing: -5px;
+    letter-spacing: 0;
     opacity: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     transition: letter-spacing 0.8s ease, opacity 0.5s, background 0.3s;
     text-shadow: none !important;
   }
+
+  /* Arata textul span si la mobil */
+  .meniu-lista li .btn-meniu span {
+    display: inline !important;
+  }
+
+  .meniu-lista li .btn-meniu i {
+    margin-right: 0;
+    font-size: 1rem;
+  }
+
   .meniu-lista li .btn-meniu:hover {
     background-color: var(--culoare-hover);
   }
+
   .meniu-lista li.btn-acasa span {
-    display: none;
+    display: inline !important;
   }
-  .burger-check:checked ~ .nav-principal .btn-meniu {
-    letter-spacing: 2px;
+
+  .burger-check:checked~.nav-principal .btn-meniu {
+    letter-spacing: 0;
     opacity: 1;
   }
+
   .submeniu {
     position: static !important;
-    transform: scaleY(1) !important;
-    background: rgba(0, 0, 0, 0.1) !important;
+    transform: none !important;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out !important;
+    background: var(--culoare-meniu) !important;
+    width: 100%;
+  }
+
+  .meniu-lista li:hover .submeniu {
+    max-height: 200px;
   }
 }
+
 .burger-label {
   display: none;
   font-size: 2rem;
   cursor: pointer;
   color: var(--culoare-meniu);
 }
+
 @media (max-width: 600px) {
   .burger-label {
     display: block;
@@ -156,4 +216,6 @@ body {
 
 .burger-check {
   display: none;
-}/*# sourceMappingURL=meniu.css.map */
+}
+
+/*# sourceMappingURL=meniu.css.map */

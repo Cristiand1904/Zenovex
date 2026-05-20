@@ -19,6 +19,7 @@
     <title>Zenovex | Viitorul Artei Digitale</title>
 
     <link rel="stylesheet" href="../resurse/css/stil.css">
+    <link rel="stylesheet" href="../resurse/css/meniu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +30,35 @@
 <body>
     <header>
         <h1 class="logo">Zenovex</h1>
-        <nav>
-            <ul class="meniu-principal">
-                <li><a href="#welcome">Acasa</a></li>
-                <li><a href="#statistici">Marketplace</a></li>
-                <li><a href="#dictionar">Educație</a></li>
+        <input type="checkbox" id="burger-check" class="burger-check">
+        <label for="burger-check" class="burger-label">&#9776;</label>
+        <p id="banner-print">Acesta este un proiect școlar</p>
+        <nav class="nav-principal">
+            <ul class="meniu-lista">
+                <li class="btn-acasa">
+                    <a href="#welcome" class="btn-meniu">
+                        <i class="fas fa-home"></i><span>Acasă</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#statistici" class="btn-meniu">
+                        <i class="fas fa-store"></i><span>Marketplace</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#dictionar" class="btn-meniu">
+                        <i class="fas fa-graduation-cap"></i><span>Educație</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#galerie" class="btn-meniu">
+                        <i class="fas fa-images"></i><span>Galerie</span>
+                    </a>
+                    <ul class="submeniu">
+                        <li><a href="#galerie">Galerie statică</a></li>
+                        <li><a href="#video-ghid">Galerie dinamică</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -193,6 +218,11 @@
             <a href="#" id="link-top" title="Apasă pentru a te întoarce la începutul paginii"></a>
         </div>
     </footer>
+
+    <div id="watermark-print">
+        <span>Ganesanu</span>
+        <span>Cristian-Dumitru</span>
+    </div>
 </body>
 
 </html>
