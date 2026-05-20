@@ -1,0 +1,31 @@
+<header>
+    <div class="logo">Zenovex</div>
+
+    <div class="user-ip">
+        IP-ul tău: <%= locals.ip %>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="burger-check">
+    <label for="menu-toggle" class="burger-label">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <nav class="nav-principal">
+        <ul class="meniu-lista">
+            <li>
+                <a href="/" class="btn-meniu btn-acasa">
+                    <i class="fas fa-home"></i> <span>Acasă</span>
+                </a>
+            </li>
+            <li class="has-sub">
+                <a href="#" class="btn-meniu">
+                    <i class="fas fa-images"></i> <span>Galerii</span>
+                </a>
+                <ul class="submeniu">
+                    <li><a href="/galerie-statica">Galerie Statică</a></li>
+                    <li><a href="/galerie-dinamica">Galerie Dinamică</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>

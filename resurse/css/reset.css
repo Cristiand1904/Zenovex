@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     border: 0;
@@ -6,7 +7,27 @@ html, body {
     width: 100%;
 }
 
-div, span, h1, h2, h3, p, a, img, ul, li, table, tbody, tr, th, td, article, aside, footer, header, main, section {
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ul,
+li,
+table,
+tbody,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+main,
+section {
     margin: 0;
     padding: 0;
     border: 0;
@@ -15,11 +36,13 @@ div, span, h1, h2, h3, p, a, img, ul, li, table, tbody, tr, th, td, article, asi
     vertical-align: baseline;
 }
 
-b, strong {
+b,
+strong {
     font-weight: bold;
 }
 
-i, em {
+i,
+em {
     font-style: italic;
 }
 

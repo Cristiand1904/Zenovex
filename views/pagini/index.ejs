@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ro">
+<%- include('../fragmente/head') %>
+<body>
+    <%- include('../fragmente/header') %>
+
+    <main id="grid-pagina">
+
+        <section id="welcome" class="zona1">
+            <hgroup>
+                <h2>Lumea Digitală la un Click Distanță</h2>
+                <p class="subtitlu">Unde arta întâlnește tehnologia blockchain.</p>
+            </hgroup>
+            <blockquote cite="https://ethereum.org">
+                "NFT-urile oferă artiștilor puterea de a deține controlul asupra propriilor creații."
+            </blockquote>
+            <figure id="hero-img">
+                <img src="/resurse/imagini/banner-mare.jpg" usemap="#zenovex-map" alt="Banner Zenovex">
+                <map name="zenovex-map">
+                    <area shape="rect" coords="0,0,400,300" href="#welcome" alt="Acasa">
+                </map>
+                <figcaption>Preview: Colecția "Cybernetic Dreams".</figcaption>
+            </figure>
+        </section>
+
+        <section id="statistici" class="zona2">
+            <h2><i class="fas fa-chart-line fa-beat"></i> Top Artiști</h2>
+            <div class="container-tabel">
+                <table>
+                    <caption>Volum tranzacționat săptămâna aceasta</caption>
+                    <thead>
+                        <tr><th>Artist</th><th>Colecție</th><th>Status</th><th>Volum</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="2"><b>PixelMaster</b></td><td>Retro Waves</td><td>Trending</td><td>15.5 ETH</td></tr>
+                        <tr><td>Neon Nights</td><td>Stabil</td><td>8.2 ETH</td></tr>
+                        <tr><td><b>CryptoArtiste</b></td><td>Abstract Soul</td><td>Top Seller</td><td>22.1 ETH</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><td colspan="3">Total Marketplace:</td><td>45.8 ETH</td></tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="evenimente" class="zona3">
+            <h2>Evenimente</h2>
+            <ul>
+                <li><time datetime="2026-03-23 19:00">23 Martie</time> - Lansare "Neo-Tokyo".</li>
+                <li><time datetime="2026-03-28 14:00">28 Martie</time> - Workshop Securitate.</li>
+            </ul>
+        </section>
+
+        <section class="zona4">
+            <h2>Anunțuri</h2>
+            <p><strong>ATENȚIE!</strong> Beneficiază de <ins><s>10%</s> 0% comision</ins> acum!</p>
+        </section>
+
+        <section class="zona8">
+            <div id="video-ghid">
+                <h2>Tutoriale Video</h2>
+                <div class="taburi-video">
+                    <a href="https://www.youtube.com/embed/s45bwhhVTmk" target="video-player">NFT?</a>
+                    <a href="https://www.youtube.com/embed/hXuK6FxD2bo" target="video-player">Securitate</a>
+                    <a href="https://www.youtube.com/embed?list=PLASEfdY-tiDrIwtPGSO7dfqeVvVyjf07o" target="video-player">Playlist</a>
+                </div>
+                <iframe name="video-player" src="https://www.youtube.com/embed?list=PLASEfdY-tiDrIwtPGSO7dfqeVvVyjf07o" title="YouTube" allowfullscreen></iframe>
+            </div>
+
+            <div id="galerie">
+                <h2>Galerie</h2>
+                <figure>
+                    <picture>
+                        <source srcset="/resurse/imagini/nft-1-large.jpg" media="(min-width: 1024px)">
+                        <img src="/resurse/imagini/nft-1-small.jpg" alt="Cyber-Cat" title="Click pentru 4K">
+                    </picture>
+                    <figcaption>Artwork 01 - "Cyber-Cat".</figcaption>
+                </figure>
+            </div>
+
+            <!-- Formula matematică inclusă în zona8 -->
+            <div id="calcul-cost" class="zona-math">
+                <h3><i class="fas fa-calculator"></i> Calculul Costului</h3>
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                    <mrow>
+                        <msub class="m-rezultat">
+                            <mi>C</mi>
+                            <mtext>total</mtext>
+                        </msub>
+                        <mo class="m-operator">=</mo>
+                        <msub class="m-pret">
+                            <mi>P</mi>
+                            <mtext>NFT</mtext>
+                        </msub>
+                        <mo class="m-operator">+</mo>
+                        <mo class="m-paranteza">(</mo>
+                        <mi class="m-variabila">G</mi>
+                        <mo class="m-operator">&times;</mo>
+                        <msub class="m-variabila">
+                            <mi>P</mi>
+                            <mtext>gas</mtext>
+                        </msub>
+                        <mo class="m-paranteza">)</mo>
+                    </mrow>
+                </math>
+                <p class="nota-math"><small>* G reprezintă unitățile de Gas, iar Pgas prețul per unitate.</small></p>
+            </div>
+        </section>
+
+        <section class="zona7">
+            <h3>Status Rețea</h3>
+            <p>Gas Price: 15 Gwei</p>
+            <p>IP-ul tău: <strong><%= locals.ip %></strong></p>
+        </section>
+
+        <section class="zona5">
+            <h3>Comunitate</h3>
+            <p>Utilizatori activi: 1,240</p>
+        </section>
+
+        <section class="zona6">
+            <h3>Profilul tău</h3>
+            <p>Conectează-ți portofelul...</p>
+        </section>
+
+    </main>
+
+    <%- include('../fragmente/footer') %>
+</body>
+</html>
