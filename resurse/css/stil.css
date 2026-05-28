@@ -191,14 +191,39 @@ tbody tr:nth-child(even):hover {
     transition: var(--tranzitie);
     box-shadow: 0 0 8px rgba(168, 85, 247, 0.35),
         0 0 16px rgba(168, 85, 247, 0.15);
+    /* Anuleaza efectele generale de link din main a */
+    background-image: none;
+    background-size: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Anuleaza iconita ⮳ de pe linkurile externe pentru tab-uri */
+.taburi-video a[href^="http"]::before,
+.taburi-video a::before {
+    content: none !important;
+}
+
+/* Anuleaza hover-ul general de cerc radial pentru tab-uri */
 .taburi-video a:hover {
     background-color: #e9d5ff;
+    background-image: none;
+    background-size: unset;
     color: var(--primary-dark);
     border-color: var(--primary-dark);
     box-shadow: 0 0 14px rgba(168, 85, 247, 0.7),
         0 0 28px rgba(168, 85, 247, 0.4);
+}
+
+/* Anuleaza culoarea visited pentru tab-uri */
+.taburi-video a:visited {
+    color: var(--text-main);
+}
+
+/* Anuleaza outline la active pentru tab-uri */
+.taburi-video a:active {
+    outline: none;
 }
 
 #link-top {
@@ -379,6 +404,46 @@ math {
     display: none;
 }
 
+main a {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+    background-image: radial-gradient(circle, var(--primary) 0%, transparent 40%, transparent 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0% 0%;
+    transition: background-size 0.5s ease, color 0.3s ease;
+}
+
+main a:visited {
+    color: var(--accent);
+}
+
+main a:hover {
+    background-size: 100% 100%;
+    color: var(--primary-dark);
+}
+
+main a:active {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+main a[href^="http"]::before {
+    content: "⮳";
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+main a[href^="http"]:hover::before {
+    color: var(--accent);
+}
+
 @media print {
 
     @page :left {
@@ -391,7 +456,8 @@ math {
         margin-right: 3cm;
     }
 
-    #watermark-print {
+    #watermark-print,
+    .watermark-print {
         display: flex !important;
         flex-direction: column;
         justify-content: center;
@@ -403,16 +469,21 @@ math {
         height: 1cm;
         border: 3px solid black;
         border-radius: 3px;
-        opacity: 0.4;
+        opacity: 0.8;
         font-weight: bold;
         font-size: 0.35cm;
         text-align: center;
         background: white;
     }
 
-    #watermark-print span {
+    #watermark-print span,
+    .watermark-print {
         display: block;
         line-height: 1.2;
+    }
+
+    .user-ip {
+        display: none !important;
     }
 
     img,

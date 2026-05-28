@@ -1,9 +1,7 @@
 <header>
     <div class="logo">Zenovex</div>
 
-    <div class="user-ip">
-        IP-ul tău: <%= locals.ip %>
-    </div>
+    <p id="banner-print">Acesta este un proiect școlar</p>
 
     <input type="checkbox" id="menu-toggle" class="burger-check">
     <label for="menu-toggle" class="burger-label">
@@ -17,15 +15,34 @@
                     <i class="fas fa-home"></i> <span>Acasă</span>
                 </a>
             </li>
+            <li>
+                <a href="/despre" class="btn-meniu">
+                    <i class="fas fa-info-circle"></i> <span>Despre</span>
+                </a>
+            </li>
             <li class="has-sub">
                 <a href="#" class="btn-meniu">
-                    <i class="fas fa-images"></i> <span>Galerii</span>
+                    <i class="fas fa-images"></i> <span>Galerie</span>
                 </a>
                 <ul class="submeniu">
-                    <li><a href="/galerie-statica">Galerie Statică</a></li>
-                    <li><a href="/galerie-dinamica">Galerie Dinamică</a></li>
+                    <li><a href="/#galerie">Galerie Statică</a></li>
+                    <li><a href="/#video-ghid">Galerie Dinamică</a></li>
                 </ul>
+            </li>
+            <li>
+                <a href="/#statistici" class="btn-meniu">
+                    <i class="fas fa-store"></i> <span>Marketplace</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#dictionar" class="btn-meniu">
+                    <i class="fas fa-graduation-cap"></i> <span>Educație</span>
+                </a>
             </li>
         </ul>
     </nav>
+
+    <div class="user-ip">
+        IP: <strong><%= locals.ip || '::1' %></strong>
+    </div>
 </header>

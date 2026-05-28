@@ -1,0 +1,31 @@
+{
+  "cale_baza": "/resurse/imagini/erori",
+  "eroare_default": {
+    "titlu": "Eroare Necunoscută",
+    "text": "A apărut o eroare neașteptată. Te rugăm să revii mai târziu.",
+    "imagine": "/default.png"
+  },
+  "info_erori": [
+    {
+      "identificator": 400,
+      "status": true,
+      "titlu": "400 - Bad Request",
+      "text": "Cererea ta nu este validă. Accesul la fișierele .ejs este interzis.",
+      "imagine": "/400.png"
+    },
+    {
+      "identificator": 403,
+      "status": true,
+      "titlu": "403 - Forbidden",
+      "text": "Nu ai permisiunea de a accesa această resursă.",
+      "imagine": "/403.png"
+    },
+    {
+      "identificator": 404,
+      "status": true,
+      "titlu": "404 - Pagina Negăsită",
+      "text": "Pagina pe care o cauți nu există sau a fost mutată.",
+      "imagine": "/404.png"
+    }
+  ]
+}

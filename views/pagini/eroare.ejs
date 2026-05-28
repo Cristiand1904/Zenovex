@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="ro">
 <%- include('../fragmente/head') %>
-<body>
-    <%- include('../fragmente/header') %>
 
-    <main id="grid-pagina">
-        <section class="zona-eroare" style="text-align: center; padding: 50px; grid-column: 1 / -1;">
-            <h1 style="font-size: 3rem; color: #a855f7; font-family: 'Orbitron', sans-serif;"><%= titlu %></h1>
-            <p style="font-size: 1.2rem; margin-bottom: 30px;"><%= text %></p>
-            
-            <div class="container-img-eroare">
-                <img src="<%= imagine %>" alt="Eroare Zenovex" style="max-width: 500px; border-radius: 15px; border: 2px solid #a855f7; box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);">
-            </div>
+    <body>
+        <%- include('../fragmente/header') %>
 
-            <p style="margin-top: 40px;">
-                <a href="/" style="background: #a855f7; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-                    <i class="fas fa-arrow-left"></i> Înapoi la Acasă
-                </a>
-            </p>
-        </section>
-    </main>
+            <main id="grid-pagina">
+                <section class="zona-eroare">
+                    <h1>
+                        <%= titlu %>
+                    </h1>
+                    <p>
+                        <%= text %>
+                    </p>
 
-    <%- include('../fragmente/footer') %>
-</body>
+                    <div class="container-img-eroare">
+                        <img src="<%= imagine %>" alt="Eroare Zenovex">
+                    </div>
+
+                    <p>
+                        <a href="/" class="btn-acasa-eroare">
+                            <i class="fas fa-arrow-left"></i> Home
+                        </a>
+                    </p>
+                </section>
+            </main>
+
+            <%- include('../fragmente/footer') %>
+    </body>
+
 </html>
