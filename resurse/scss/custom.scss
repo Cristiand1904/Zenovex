@@ -1,0 +1,169 @@
+
+
+$primary:            #a855f7;
+$secondary:          #6366f1;
+$success:            #10b981;
+$info:               #06b6d4;
+$warning:            #f59e0b;
+$danger:             #ef4444;
+$light:              #f3e8ff;
+$dark:               #1f2937;
+
+$body-bg:            #fafafa;
+$body-color:         #1f2937;
+
+$link-color:             #a855f7;
+$link-hover-color:       #7e22ce;
+$btn-close-color:        #7e22ce;
+
+$grid-breakpoints: (
+  xs:   0,
+  sm:   576px,
+  md:   820px,
+  lg:   1100px,
+  xl:   1280px,
+  xxl:  1440px
+);
+
+$container-max-widths: (
+  sm:   540px,
+  md:   780px,
+  lg:   1060px,
+  xl:   1240px,
+  xxl:  1400px
+);
+
+$border-radius:          0.75rem;
+$border-radius-sm:       0.4rem;
+$border-radius-lg:       1rem;
+$border-radius-xl:       1.25rem;
+$border-radius-pill:     50rem;
+
+$h1-font-size:           2.5rem;
+$h2-font-size:           2rem;
+$h3-font-size:           1.6rem;
+$h4-font-size:           1.3rem;
+$h5-font-size:           1.1rem;
+$h6-font-size:           0.95rem;
+$headings-font-weight:   700;
+$headings-color:         #a855f7;
+
+$font-family-base:        'Inter', system-ui, -apple-system, sans-serif;
+$font-family-sans-serif:  'Inter', system-ui, -apple-system, sans-serif;
+$font-family-monospace:   'Courier New', Courier, monospace;
+
+$box-shadow:              0 0.25rem 0.75rem rgba(168, 85, 247, 0.12);
+$box-shadow-sm:           0 0.125rem 0.25rem rgba(168, 85, 247, 0.08);
+$box-shadow-lg:           0 0.5rem 1.5rem rgba(168, 85, 247, 0.2);
+$transition-base:         all 0.3s ease;
+$transition-fade:         opacity 0.4s ease;
+$card-border-color:       rgba(168, 85, 247, 0.2);
+$card-bg:                 #ffffff;
+$card-cap-bg:             rgba(168, 85, 247, 0.05);
+$badge-font-size:         0.75em;
+$badge-border-radius:     0.5rem;
+$navbar-padding-y:        0.75rem;
+$alert-border-radius:     0.75rem;
+$input-border-color:      rgba(168, 85, 247, 0.35);
+$input-focus-border-color: #a855f7;
+$input-focus-box-shadow:  0 0 0 0.2rem rgba(168, 85, 247, 0.25);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif !important;
+    color: $primary;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.meniu-lista {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+main a {
+    color: $primary;
+    text-decoration: underline;
+}
+
+main a:hover {
+    color: darken($primary, 15%);
+}
+
+.container-tabel table {
+    border-collapse: separate;
+    border-spacing: 0.125rem;
+}
+
+.badge-nft {
+    background: linear-gradient(135deg, $primary, $secondary);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    padding: 0.3em 0.6em;
+    border-radius: $border-radius-sm;
+    text-transform: uppercase;
+}
+
+.alert-galerie {
+    border-left: 4px solid $primary;
+    background: rgba($primary, 0.07);
+    color: darken($primary, 20%);
+    border-color: rgba($primary, 0.25);
+    border-radius: $border-radius;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+
+    .alert-icon {
+        margin-right: 0.4rem;
+    }
+}
+
+.card-zenovex {
+    border: 1px solid rgba($primary, 0.2);
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow;
+    background: $card-bg;
+
+    .card-header {
+        background: linear-gradient(135deg, rgba($primary, 0.08), rgba($secondary, 0.06));
+        border-bottom: 1px solid rgba($primary, 0.15);
+        font-family: 'Orbitron', sans-serif;
+        color: $primary;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+.btn-zenovex {
+    @extend .btn;
+    @extend .btn-primary;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: $border-radius;
+    transition: $transition-base;
+    box-shadow: $box-shadow-sm;
+
+    &:hover {
+        box-shadow: $box-shadow;
+        transform: translateY(-1px);
+    }
+}
+
+.spinner-nft {
+    color: $primary;
+    width: 1.5rem;
+    height: 1.5rem;
+}

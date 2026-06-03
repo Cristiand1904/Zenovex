@@ -1,0 +1,75 @@
+{
+  "cale_galerie": "/resurse/imagini/galerie/",
+  "imagini": [
+    {
+      "cale_imagine": "nft-galerie-1.jpg",
+      "titlu": "Cosmic Dragon",
+      "descriere": "Un dragon cosmic alcătuit din particule stelare și nebule, navigând printre galaxii digitale.",
+      "sfert_ora": "1",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-5.jpg",
+      "titlu": "Crystal Mermaid",
+      "descriere": "Sirenă etereală construită din cristale și refracții de lumină prismatică, în adâncul digital.",
+      "sfert_ora": "1",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-9.jpg",
+      "titlu": "Ethereal Knight",
+      "descriere": "Cavaler eteric în armură de lumină pură și cristal, emanând o aură legendară.",
+      "sfert_ora": "1",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-2.jpg",
+      "titlu": "Neon Samurai",
+      "descriere": "Războinic samurai în inima unui oraș cyberpunk, cu katana ce emite lumini neon vibrante.",
+      "sfert_ora": "2",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-6.jpg",
+      "titlu": "Glitch Warrior",
+      "descriere": "Războinic cu efect de glitch și explozie de pixeli fragmentați, estetică vaporwave.",
+      "sfert_ora": "2",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-3.jpg",
+      "titlu": "Digital Phoenix",
+      "descriere": "Phoenix de aur renăscând din flăcări digitale și trasee de circuit imprimat.",
+      "sfert_ora": "3",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-7.jpg",
+      "titlu": "Quantum Fox",
+      "descriere": "Vulpe cuantică alcătuită din particule de lumină și unde de energie, formând modele geometrice.",
+      "sfert_ora": "3",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-4.jpg",
+      "titlu": "Cyber Wolf",
+      "descriere": "Lup mecanic cu modele de circuit pe corp și ochi neon verzi, paznic al rețelei digitale.",
+      "sfert_ora": "4",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-8.jpg",
+      "titlu": "Binary Garden",
+      "descriere": "Grădină digitală unde florile sunt sculptate din cod binar luminos și lumină emergentă.",
+      "sfert_ora": "4",
+      "autor": "Zenovex AI"
+    },
+    {
+      "cale_imagine": "nft-galerie-12.jpg",
+      "titlu": "Solar Pharaoh",
+      "descriere": "Faraon solar, divinitate digitală cu energie solară și hieroglife de lumină.",
+      "sfert_ora": "4",
+      "autor": "Zenovex AI"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<%- include('../fragmente/head') %>
+
+    <body>
+        <%- include('../fragmente/header') %>
+
+        <main id="grid-pagina">
+            <section class="zona1 galerie-statica-hero">
+                <hgroup>
+                    <h2><i class="fas fa-layer-group"></i> Galerie Statică</h2>
+                    <p class="subtitlu">Colecție curentă de artă digitală NFT — actualizată în funcție de sfertul de oră.</p>
+                </hgroup>
+
+                <!-- Bootstrap alert – ilustrare customizare Bootstrap -->
+                <div class="alert alert-galerie alert-dismissible fade show d-flex align-items-center gap-2 mt-3" role="alert">
+                    <i class="fas fa-clock alert-icon"></i>
+                    <span>Imaginile afișate se actualizează automat în funcție de sfertul de oră curent.
+                    Reîncarcă pagina pentru a vedea colecția corespunzătoare momentului din zi.</span>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Închide"></button>
+                </div>
+            </section>
+
+            <!-- Bootstrap cards – ilustrare customizare: 2 teme cromatice (light + dark) -->
+            <section class="zona6">
+                <!-- TEMA 1: Light (lavender) -->
+                <div class="card card-zenovex mb-3">
+                    <div class="card-header d-flex align-items-center gap-2">
+                        <i class="fas fa-sun"></i> Tema 1 – Light (#f3e8ff lavender)
+                    </div>
+                    <div class="card-body bg-light rounded-bottom">
+                        <p class="card-text" style="font-size:0.85rem; margin-bottom:0.75rem;">
+                            Schema cromatică Zenovex aplicată pe <strong>tema luminoasă</strong>:
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary px-3 py-2">Primary #a855f7</span>
+                            <span class="badge bg-secondary px-3 py-2">Secondary #6366f1</span>
+                            <span class="badge bg-success px-3 py-2">Success #10b981</span>
+                            <span class="badge bg-info text-dark px-3 py-2">Info #06b6d4</span>
+                        </div>
+                        <hr style="border-color: rgba(168,85,247,0.2); margin: 0.5rem 0;">
+                        <div class="d-flex flex-wrap gap-3" style="font-size:0.8rem; color:#666;">
+                            <span><i class="fas fa-tablet-screen-button me-1" style="color:#a855f7;"></i>md: 820px</span>
+                            <span><i class="fas fa-desktop me-1" style="color:#a855f7;"></i>lg: 1100px</span>
+                            <span><i class="fas fa-circle-half-stroke me-1" style="color:#a855f7;"></i>radius: 0.75rem</span>
+                            <span><i class="fas fa-font me-1" style="color:#a855f7;"></i>font: Inter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 2: Dark (#1f2937) -->
+                <div class="card card-zenovex">
+                    <div class="card-header d-flex align-items-center gap-2">
+                        <i class="fas fa-moon"></i> Tema 2 – Dark (#1f2937)
+                    </div>
+                    <div class="card-body bg-dark rounded-bottom">
+                        <p class="card-text text-white" style="font-size:0.85rem; margin-bottom:0.75rem;">
+                            Schema cromatică Zenovex aplicată pe <strong>tema întunecată</strong>:
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary px-3 py-2">Primary #a855f7</span>
+                            <span class="badge bg-warning text-dark px-3 py-2">Warning #f59e0b</span>
+                            <span class="badge bg-danger px-3 py-2">Danger #ef4444</span>
+                            <span class="badge bg-light text-dark px-3 py-2">Light #f3e8ff</span>
+                        </div>
+                        <hr style="border-color: rgba(168,85,247,0.3); margin: 0.5rem 0;">
+                        <div class="d-flex flex-wrap gap-3" style="font-size:0.8rem; color:#aaa;">
+                            <span><i class="fas fa-heading me-1" style="color:#a855f7;"></i>h1: 2.5rem</span>
+                            <span><i class="fas fa-text-height me-1" style="color:#a855f7;"></i>h2: 2rem</span>
+                            <span><i class="fas fa-weight-hanging me-1" style="color:#a855f7;"></i>bold: 700</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <%- include('../fragmente/galerie', { imaginiGalerie: imaginiGalerie, caleGalerie: caleGalerie }) %>
+        </main>
+
+        <%- include('../fragmente/footer') %>
+
+        <!-- Bootstrap JS pentru alert dismissible -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

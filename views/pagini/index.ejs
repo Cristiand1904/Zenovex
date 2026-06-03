@@ -80,7 +80,7 @@
                     </ul>
                 </section>
 
-                <section class="zona4">
+                <section class="zona6">
                     <h2>Anunțuri</h2>
                     <p><strong>ATENȚIE!</strong> Beneficiază de <ins><s>10%</s> 0% comision</ins> acum!</p>
                 </section>
@@ -113,18 +113,14 @@
                             allowfullscreen></iframe>
                     </div>
 
-                    <div id="galerie">
-                        <h2>Galerie</h2>
-                        <figure>
-                            <picture>
-                                <source srcset="/resurse/imagini/nft-1-large.jpg" media="(min-width: 1024px)">
-                                <img src="/resurse/imagini/nft-1-small.jpg" alt="Cyber-Cat" title="Click pentru 4K">
-                            </picture>
-                            <figcaption>Artwork 01 - "Cyber-Cat".</figcaption>
-                        </figure>
-                    </div>
+                    <hr class="separator-hr">
 
-                    <div id="calcul-cost" class="zona-math">
+                    <%- include('../fragmente/galerie', { imaginiGalerie: locals.imaginiGalerie || [], caleGalerie: locals.caleGalerie || '' }) %>
+
+                </section>
+
+                <section class="zona7">
+                    <div class="math-container-header">
                         <h3><i class="fas fa-calculator"></i> Calculul Costului</h3>
                         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
                             <mrow>
@@ -148,24 +144,28 @@
                                 <mo class="m-paranteza">)</mo>
                             </mrow>
                         </math>
-                        <p class="nota-math"><small>* G reprezintă unitățile de Gas, iar Pgas prețul per
-                                unitate.</small></p>
                     </div>
-                </section>
-
-                <section class="zona7">
-                    <h3>Status Rețea</h3>
-                    <p>Gas Price: 15 Gwei</p>
+                    <p class="nota-math"><small>* G reprezintă unitățile de Gas, iar Pgas prețul per unitate.</small></p>
                 </section>
 
                 <section class="zona5">
-                    <h3>Comunitate</h3>
-                    <p>Utilizatori activi: 1,240</p>
+                    <h3>Status Rețea</h3>
+                    <p class="reflexie-text" data-text="Gas Price: 15 Gwei">Gas Price: 15 Gwei</p>
                 </section>
 
-                <section class="zona6">
-                    <h3>Profilul tău</h3>
-                    <p>Conectează-ți portofelul...</p>
+                <section id="educatie" class="zona4">
+                    <h3><i class="fas fa-graduation-cap"></i> Informații Utile</h3>
+                    <p>Vrei să înveți mai multe despre NFT-uri? Află tot ce trebuie să știi despre tehnologia din spatele lor.</p>
+                    <ul>
+                        <li>Ce sunt NFT-urile și cum funcționează</li>
+                        <li>Standarde blockchain (ERC-721, ERC-1155)</li>
+                        <li>Piețe populare: OpenSea, Rarible, Foundation</li>
+                    </ul>
+                    <p>
+                        <a href="https://en.wikipedia.org/wiki/Non-fungible_token" target="_blank" rel="noopener noreferrer">
+                            Citește mai mult pe Wikipedia
+                        </a>
+                    </p>
                 </section>
 
             </main>

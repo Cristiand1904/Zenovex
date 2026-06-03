@@ -1,0 +1,35 @@
+<section id="galerie-statica">
+    <h2><i class="fas fa-images"></i> Galerie NFT</h2>
+
+    <% if (imaginiGalerie && imaginiGalerie.length > 0) { %>
+        <div class="galerie-grid">
+            <% imaginiGalerie.forEach(function(img) { %>
+                <figure class="galerie-item">
+                    <div class="galerie-item-badges">
+                        <!-- Bootstrap badge – demonstratie customizare -->
+                        <span class="badge bg-primary badge-nft">NFT</span>
+                        <span class="badge bg-secondary">S<%= img.sfert_ora %></span>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="<%= caleGalerie %><%= img.cale_imagine.replace(/\.(jpg|jpeg|png)$/i, '-mic.$1') %>"
+                            media="(max-width: 600px)">
+                        <img
+                            src="<%= caleGalerie %><%= img.cale_imagine %>"
+                            alt="<%= img.titlu %>"
+                            title="<%= img.titlu %>"
+                            loading="lazy">
+                    </picture>
+                    <figcaption><%= img.descriere %></figcaption>
+                </figure>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <!-- Bootstrap alert – demonstratie customizare -->
+        <div class="alert alert-warning d-flex align-items-center gap-2" role="alert">
+            <i class="fas fa-clock-rotate-left"></i>
+            <span>Nu există imagini disponibile pentru sfertul de oră curent. Reîncarcă pagina mai târziu.</span>
+        </div>
+    <% } %>
+</section>
+
